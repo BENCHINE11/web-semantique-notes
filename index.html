@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>L’Couple — Moroccan TV Series</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body { background: linear-gradient(180deg,#212529 0%,#141719 100%); }
+    .poster-card { background:#AF5D34; border:none; border-radius:20px; overflow:hidden; box-shadow:0 20px 40px rgba(0,0,0,.6); }
+    .poster-title { color: #f5f5f5; font-size:3rem; font-weight:800; letter-spacing:1px; }
+    .poster-description { color:#FFF3E6; font-size:1.1rem; font-weight: 500; }
+    .poster-image { max-height:480px; object-fit:cover; border-radius:12px; }
+    .badge-custom { background:#0F766E; }
+    .badge-custom2 { background:#14532D; }
+    .meta-label { color:#F5F5F5; font-weight: 700; font-size:.85rem; text-transform:uppercase; letter-spacing:.05em; }
+    .meta-description { color:#FFF3E6; }
+    .season-bg { background: #FFF3E6; }
+    .season-title { color: black; font-weight:700; }
+  </style>
+</head>
+
+<body>
+  <main class="container py-5">
+
+    <!-- TVSeries Microdata root -->
+    <div class="row justify-content-center"
+         itemscope
+         itemtype="https://schema.org/TVSeries">
+
+      <div class="col-lg-9 col-xl-8">
+
+        <div class="card poster-card p-4 p-md-5">
+
+          <!-- Title (name) -->
+          <div class="text-center mb-3">
+            <h1 class="poster-title" itemprop="name">L’Couple</h1>
+
+            <!-- Genre (from CreativeWork) -->
+            <div class="mt-2">
+              <span class="badge badge-custom me-2" itemprop="genre">Comedy</span>
+              <span class="badge badge-custom2 me-2" itemprop="genre">Sitcom</span>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <p class="poster-description text-center mb-4" itemprop="description">
+            A Moroccan sitcom that humorously portrays everyday married life through short episodes,
+            highlighting common situations and misunderstandings in a light and relatable way.
+          </p>
+
+          <!-- Poster image -->
+          <div class="text-center mb-5">
+            <img
+              src="images/lcouple-poster.png"
+              alt="Poster of L’Couple"
+              class="img-fluid poster-image"
+              itemprop="image"
+            />
+          </div>
+
+          <!-- Bottom metadata (your requested TVSeries props) -->
+          <div class="row g-4 text-center text-md-start">
+
+            <!-- startDate / endDate (from CreativeWorkSeries) -->
+            <div class="col-md-4">
+              <div class="meta-label">Start date</div>
+              <div class="meta-description">
+                <time datetime="2006-01-01" itemprop="startDate">2006</time>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="meta-label">End date</div>
+              <div class="meta-description">
+                <time datetime="2010-12-31" itemprop="endDate">2010</time>
+                <!-- If unknown/ongoing, you can remove endDate or replace with a note -->
+              </div>
+            </div>
+
+            <!-- countryOfOrigin -->
+            <div class="col-md-4" itemprop="countryOfOrigin" itemscope itemtype="https://schema.org/Country">
+              <div class="meta-label">Country of origin</div>
+              <div class="meta-description" itemprop="name">Morocco</div>
+            </div>
+
+            <!-- director -->
+            <div class="col-md-4" itemprop="director" itemscope itemtype="https://schema.org/Person">
+              <div class="meta-label">Director</div>
+              <div class="meta-description" itemprop="name">Director name placeholder</div>
+            </div>
+
+            <!-- productionCompany -->
+            <div class="col-md-4" itemprop="productionCompany" itemscope itemtype="https://schema.org/Organization">
+              <div class="meta-label">Production company</div>
+              <div class="meta-description" itemprop="name">Production company placeholder</div>
+            </div>
+
+            <!-- musicBy -->
+            <div class="col-md-4" itemprop="musicBy" itemscope itemtype="https://schema.org/Person">
+              <div class="meta-label">Music by</div>
+              <div class="meta-description" itemprop="name">Composer name placeholder</div>
+            </div>
+
+            <!-- numberOfSeasons / numberOfEpisodes -->
+            <div class="col-md-4">
+              <div class="meta-label">Number of seasons</div>
+              <div class="meta-description" itemprop="numberOfSeasons">2</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="meta-label">Number of episodes</div>
+              <div class="meta-description" itemprop="numberOfEpisodes">120</div>
+            </div>
+
+            <!-- actor (you asked for actorPerformingGroup or Person - we'll use Person) -->
+            <div class="col-md-4" itemprop="actor" itemscope itemtype="https://schema.org/Person">
+              <div class="meta-label">Actor</div>
+              <div class="meta-description" itemprop="name">Hassan El Fad</div>
+            </div>
+
+          </div>
+
+          <hr class="my-5 border-secondary" />
+
+          <!-- containsSeason (TVSeason / CreativeWorkSeason) -->
+          <section class="mb-4">
+            <h2 class="h5 meta-label">Seasons</h2>
+
+            <div class="row g-3">
+
+              <div class="col-md-6"
+                   itemprop="containsSeason"
+                   itemscope
+                   itemtype="https://schema.org/TVSeason">
+                <div class="p-3 rounded season-bg">
+                  <div class="fw-semibold" itemprop="name">Season 1</div>
+                  <div class="small text-secondary">
+                    Release: <time datetime="2006-01-01" itemprop="startDate">2006</time>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6"
+                   itemprop="containsSeason"
+                   itemscope
+                   itemtype="https://schema.org/TVSeason">
+                <div class="p-3 rounded season-bg">
+                  <div class="fw-semibold" itemprop="name">Season 2</div>
+                  <div class="small text-secondary">
+                    Release: <time datetime="2008-01-01" itemprop="startDate">2008</time>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- episode -->
+          <section class="mb-4">
+            <h2 class="h5 meta-label">Featured episodes</h2>
+
+            <div class="row g-3">
+              <div class="col-md-6"
+                   itemprop="episode"
+                   itemscope
+                   itemtype="https://schema.org/TVEpisode">
+                <div class="p-3 rounded season-bg">
+                  <div class="fw-semibold" itemprop="name">Episode 1 — “The First Argument”</div>
+                  <div class="small text-secondary">
+                    Air date: <time datetime="2006-03-01" itemprop="datePublished">2006-03-01</time>
+                  </div>
+                  <p class="mb-0 mt-2 small" itemprop="description">
+                    A small misunderstanding becomes a big (funny) debate.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6"
+                   itemprop="episode"
+                   itemscope
+                   itemtype="https://schema.org/TVEpisode">
+                <div class="p-3 rounded season-bg">
+                  <div class="fw-semibold" itemprop="name">Episode 2 — “Unexpected Guests”</div>
+                  <div class="small text-secondary">
+                    Air date: <time datetime="2006-03-08" itemprop="datePublished">2006-03-08</time>
+                  </div>
+                  <p class="mb-0 mt-2 small" itemprop="description">
+                    A calm evening turns chaotic when visitors show up.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- trailer -->
+          <section class="mb-2">
+            <h2 class="h5 meta-label">Trailer</h2>
+
+            <div itemprop="trailer" itemscope itemtype="https://schema.org/VideoObject" class="p-3 rounded bg-dark">
+              <div class="meta-label">Video</div>
+              <div class="fw-semibold" itemprop="name">Official Trailer (Placeholder)</div>
+
+              <!-- Optional fields for VideoObject (helpful for SEO, not required by your list) -->
+              <meta itemprop="uploadDate" content="2025-12-18" />
+              <meta itemprop="description" content="Trailer for the TV series." />
+
+              <div class="ratio ratio-16x9">
+                <iframe
+                    src="https://www.youtube.com/embed/Gq0mYGiwR4I"
+                    title="Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
