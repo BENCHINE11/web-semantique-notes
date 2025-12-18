@@ -39,8 +39,8 @@ tvseries-microdata-lcouple/
 ├─ index.html
 ├─ images/
 │ └─ lcouple-poster.png
-├─ docs/
-│ └─ rapport.md
+├─ notes/
+│ └─ Notes_cours_Semantic_Web_1.pdf
 └─ README.md
 ```
 
@@ -49,7 +49,7 @@ Just open `index.html` in your browser.
 
 ## 📄 Report
 See the full report (course-notes style) here:
-- `docs/rapport.md`
+- `notes/Notes_cours_Semantic_Web_1.pdf`
 
 ## 🔎 How this makes the page machine-readable
 By adding Schema.org Microdata, the HTML is no longer only visual content.  
